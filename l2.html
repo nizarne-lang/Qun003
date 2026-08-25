@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>أشكال ڤن (Venn) وتمثيل المجموعة | الفصل الأول: المجموعات</title>
+<meta name="description" content="كيف نرسم المجموعة؟ ولماذا يجعل الرسمُ الحكمَ على الانتماء أسهل بكثير من الرموز وحدها؟">
+<meta name="author" content="كلية الأعمال والاقتصاد - جامعة القصيم">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='18' fill='none' stroke='%231d6fb8' stroke-width='5'/%3E%3Ccircle cx='40' cy='32' r='18' fill='none' stroke='%23b5316b' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){try{var t=localStorage.getItem('qm1:theme');
+if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+  <a class="brandmark" href="index.html"><span class="dot"></span><span>الفصل الأول: المجموعات <span class="full">— دروس تفاعلية</span></span></a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn">🌙 <span>وضع ليلي</span></button>
+  <a class="iconbtn" href="index.html">☰ الفهرس</a>
+</div></header>
+<main class="wrap">
+<div class="page-head"><p class="eyebrow">الدرس الثاني · البند 1-4</p><h1>أشكال ڤن (Venn) وتمثيل المجموعة</h1><p class="lead">كيف نرسم المجموعة؟ ولماذا يجعل الرسمُ الحكمَ على الانتماء أسهل بكثير من الرموز وحدها؟</p></div>
+<div class="tip"><span class="tag">أهداف الدرس</span><ul style="margin:.2rem 0;padding-inline-start:1.2rem"><li>أن يمثّل الطالب مجموعة معطاة بمخطط ڤن.</li><li>أن يقرأ من مخطط ڤن انتماء عنصر إلى مجموعة.</li><li>أن يستخدم المخطط في تنظيم بيانات إدارية.</li></ul></div>
+
+<h2>1-4 أشكال ڤن وتمثيل المجموعة</h2>
+<p>من المفيد أحياناً أن نستعين بأشكال هندسية لتصوّر المجموعات. تُسمى هذه الأشكال <b>مخططات ڤن (Venn)</b>،
+وهي منحنيات مغلقة بسيطة — دائرة أو بيضاوي أو مستطيل — تُمثَّل العناصر بنقاط داخلها.</p>
+<div class="mb"><span class="m">A = {a, b, c, d, e}</span>&nbsp;&nbsp;،&nbsp;&nbsp;<span class="m">B = {2, 4, 6, 8}</span></div>
+<div class="figure">
+<svg class="svgbox" viewBox="0 0 520 210" style="width:100%;max-width:520px" role="img">
+  <ellipse cx="140" cy="105" rx="118" ry="78" fill="none" stroke="var(--setA)" stroke-width="2.2"/>
+  <text x="140" y="18" font-size="19" font-style="italic" font-family="Cambria Math,serif" fill="var(--setA)" text-anchor="middle">A</text>
+  <g font-size="17" font-family="Cambria Math,serif" font-style="italic" fill="var(--fg)" text-anchor="middle">
+    <text x="108" y="62">b</text><text x="180" y="82">d</text><text x="74" y="112">a</text>
+    <text x="120" y="146">c</text><text x="182" y="140">e</text></g>
+  <circle cx="410" cy="105" r="78" fill="none" stroke="var(--setB)" stroke-width="2.2"/>
+  <text x="410" y="18" font-size="19" font-style="italic" font-family="Cambria Math,serif" fill="var(--setB)" text-anchor="middle">B</text>
+  <g font-size="17" font-family="Cambria Math,serif" fill="var(--fg)" text-anchor="middle">
+    <text x="380" y="88">2</text><text x="440" y="88">4</text><text x="380" y="130">6</text><text x="440" y="130">8</text></g>
+</svg>
+<figcaption>الشكل (1-1): مخططات ڤن للمجموعتين A و B</figcaption>
+</div>
+<div class="tip"><span class="tag">قاعدة القراءة</span>العنصر داخل المنحني ⟵ ينتمي (<span class="m">∈</span>). العنصر خارجه ⟵ لا ينتمي (<span class="m">∉</span>). ولا شيء غير ذلك.</div>
+
+<h3>المستطيل الشامل</h3>
+<p>كثيراً ما نرسم مستطيلاً كبيراً يمثل <b>المجموعة الشاملة</b> ويُرمز لها بـ <span class="m">Ω</span> (أوميغا)،
+ثم نرسم داخله بقية المجموعات. وهذا هو الشكل الذي ستراه في معظم تمارين هذا الفصل.</p>
+<figure class="figure" data-venn='{"layout": "two", "items": [{"r": "A", "t": "1"}, {"r": "A", "t": "3"}, {"r": "AB", "t": "5"}, {"r": "B", "t": "8"}, {"r": "B", "t": "9"}, {"r": "U", "t": "7"}]}' data-cap="مثال: Ω = {1,3,5,8,9,7} ، A = {1,3,5} ، B = {5,8,9}"></figure>
+
+<div class="note"><span class="tag">تنبيه في القراءة</span>
+موقع العنصر في الرسم هو المعلومة كلها. فإن وُضع العدد داخل بيضاوي D لكن خارج المستطيل A،
+فهو ينتمي إلى D ولا ينتمي إلى A. تأمّل الشكل في التمرين الثاني أدناه.
+</div>
+
+<h2>تمارين تفاعلية</h2>
+<p class="lead">اكتب إجابتك ثم اضغط <b>تحقق</b>. وإن أردت خطوات الحل اضغط <b>إظهار الحل</b>.</p>
+<div id="qs"></div>
+<div id="scorePanel"></div>
+<nav class="nav-lr"><a href="l1.html">◀ مفهوم المجموعة وطرق التعبير عنها</a><a href="l3.html">العلاقة بين مجموعتين: الاحتواء والتساوي ▶</a></nav>
+<footer class="ft">
+مبادئ الرياضيات لكليات إدارة الأعمال — دروس وتمارين · الفصل الأول: المجموعات (الفئات)<br>
+كلية الأعمال والاقتصاد، جامعة القصيم · إعداد الدروس التفاعلية للمستوى التحضيري<br>
+تُحفظ إجاباتك في متصفحك فقط.
+</footer>
+</main>
+<script src="venn.js"></script>
+<script>window.LESSON_ID="l2";</script>
+<script src="app.js"></script>
+<script>QM.render("qs", [{"id": "l2q1", "no": "1", "type": "shade", "venn": "two", "src": "تمرين تفاعلي", "text": "اضغط على المنطقة التي تمثّل <b>العناصر المشتركة</b> بين <span class=\"m\">A</span> و <span class=\"m\">B</span> (المنطقة التي تنتمي إلى المجموعتين معاً).", "answer": ["AB"], "sol": "المنطقة المشتركة هي منطقة التداخل بين الدائرتين، وسنسميها لاحقاً <b>التقاطع</b> <span class=\"m\">A ∩ B</span>."}, {"id": "l2q2", "no": "2", "type": "fill", "src": "مثال (1-5) من الكتاب", "text": "من المخطط التالي، املأ الفراغات بأحد الرمزين <span class=\"m\">(∈, ∉)</span>:", "figure": "<svg class=\"svgbox\" viewBox=\"0 0 570 262\" style=\"width:100%;max-width:560px\" role=\"img\">\n  <rect x=\"200\" y=\"30\" width=\"340\" height=\"200\" fill=\"none\" stroke=\"var(--fg)\" stroke-width=\"1.8\"/>\n  <text x=\"556\" y=\"132\" font-size=\"19\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--fg)\" text-anchor=\"middle\">A</text>\n  <ellipse cx=\"200\" cy=\"110\" rx=\"150\" ry=\"68\" fill=\"none\" stroke=\"var(--setA)\" stroke-width=\"2.2\"/>\n  <text x=\"66\" y=\"52\" font-size=\"19\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--setA)\" text-anchor=\"middle\">D</text>\n  <ellipse cx=\"318\" cy=\"115\" rx=\"42\" ry=\"62\" fill=\"none\" stroke=\"var(--setC)\" stroke-width=\"2.2\"/>\n  <text x=\"318\" y=\"44\" font-size=\"19\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--setC)\" text-anchor=\"middle\">C</text>\n  <circle cx=\"442\" cy=\"115\" r=\"42\" fill=\"none\" stroke=\"var(--setB)\" stroke-width=\"2.2\"/>\n  <text x=\"442\" y=\"60\" font-size=\"19\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--setB)\" text-anchor=\"middle\">B</text>\n  <g font-size=\"17\" font-family=\"Cambria Math,serif\" fill=\"var(--fg)\" text-anchor=\"middle\" dominant-baseline=\"middle\">\n    <text x=\"172\" y=\"86\">7</text><text x=\"172\" y=\"132\">8</text>\n    <text x=\"308\" y=\"115\">0</text><text x=\"442\" y=\"115\">3</text>\n    <text x=\"508\" y=\"56\">5</text><text x=\"252\" y=\"204\">1</text><text x=\"402\" y=\"204\">2</text>\n  </g>\n</svg>", "fields": [{"pre": "7", "post": "A", "ltr": true, "options": ["∈", "∉"], "mode": "sym", "answer": "∉"}, {"pre": "0", "post": "C", "ltr": true, "options": ["∈", "∉"], "mode": "sym", "answer": "∈"}, {"pre": "2", "post": "D", "ltr": true, "options": ["∈", "∉"], "mode": "sym", "answer": "∉"}, {"pre": "3", "post": "A", "ltr": true, "options": ["∈", "∉"], "mode": "sym", "answer": "∈"}, {"pre": "1", "post": "A", "ltr": true, "options": ["∈", "∉"], "mode": "sym", "answer": "∈"}], "sol": "<ol><li><span class=\"m\">7 ∉ A</span>: العدد 7 يقع داخل <span class=\"m\">D</span> لكنه <b>خارج</b> المستطيل <span class=\"m\">A</span>.</li><li><span class=\"m\">0 ∈ C</span>: العدد 0 داخل البيضاوي <span class=\"m\">C</span>.</li><li><span class=\"m\">2 ∉ D</span>: العدد 2 داخل <span class=\"m\">A</span> لكنه خارج <span class=\"m\">D</span>.</li><li><span class=\"m\">3 ∈ A</span>: العدد 3 داخل <span class=\"m\">B</span> و <span class=\"m\">B</span> مرسومة داخل <span class=\"m\">A</span>.</li><li><span class=\"m\">1 ∈ A</span>: العدد 1 داخل المستطيل <span class=\"m\">A</span> وإن لم يكن في أي دائرة.</li></ol>"}, {"id": "l2q3", "no": "3", "type": "fill", "src": "قراءة مخطط", "text": "اقرأ المجموعات الثلاث من المخطط التالي واكتبها بطريقة السرد.", "vennFig": {"layout": "three", "items": [{"r": "A", "t": "2"}, {"r": "B", "t": "7"}, {"r": "C", "t": "9"}, {"r": "AB", "t": "4"}, {"r": "AC", "t": "6"}, {"r": "BC", "t": "8"}, {"r": "ABC", "t": "5"}]}, "fields": [{"pre": "A =", "ltr": true, "mode": "set", "answer": ["{2,4,5,6}"]}, {"pre": "B =", "ltr": true, "mode": "set", "answer": ["{7,4,5,8}"]}, {"pre": "C =", "ltr": true, "mode": "set", "answer": ["{9,6,5,8}"]}], "sol": "<p>نجمع كل عنصر يقع داخل حدود كل دائرة، بما في ذلك مناطق التداخل:</p><ol><li><span class=\"m\">A = {2, 4, 5, 6}</span></li><li><span class=\"m\">B = {4, 5, 7, 8}</span></li><li><span class=\"m\">C = {5, 6, 8, 9}</span></li></ol><p>لاحظ أن العنصر 5 ينتمي للثلاث معاً، فهو مذكور في كل مجموعة.</p>"}, {"id": "l2q4", "no": "4", "type": "info", "src": "مثال (1-4) من الكتاب", "text": "مثّل المجموعتين <span class=\"m\">A = {l, b, m, p, a}</span> و <span class=\"m\">B = {0,1,2,3,4,5}</span> بمخططات ڤن.", "sol": "<div class=\"figure\"><svg class=\"svgbox\" viewBox=\"0 0 520 200\" style=\"width:100%;max-width:520px\"><ellipse cx=\"132\" cy=\"100\" rx=\"112\" ry=\"74\" fill=\"none\" stroke=\"var(--setA)\" stroke-width=\"2.2\"/><text x=\"132\" y=\"16\" font-size=\"18\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--setA)\" text-anchor=\"middle\">A</text><g font-size=\"17\" font-family=\"Cambria Math,serif\" font-style=\"italic\" fill=\"var(--fg)\" text-anchor=\"middle\"><text x=\"76\" y=\"88\">l</text><text x=\"122\" y=\"66\">b</text><text x=\"180\" y=\"92\">m</text><text x=\"98\" y=\"136\">p</text><text x=\"164\" y=\"140\">a</text></g><ellipse cx=\"400\" cy=\"100\" rx=\"104\" ry=\"74\" fill=\"none\" stroke=\"var(--setB)\" stroke-width=\"2.2\"/><text x=\"400\" y=\"16\" font-size=\"18\" font-style=\"italic\" font-family=\"Cambria Math,serif\" fill=\"var(--setB)\" text-anchor=\"middle\">B</text><g font-size=\"17\" font-family=\"Cambria Math,serif\" fill=\"var(--fg)\" text-anchor=\"middle\"><text x=\"348\" y=\"76\">0</text><text x=\"400\" y=\"66\">1</text><text x=\"452\" y=\"80\">2</text><text x=\"356\" y=\"132\">3</text><text x=\"404\" y=\"142\">4</text><text x=\"452\" y=\"126\">5</text></g></svg></div><p>لا يهم شكل المنحني (دائرة أو بيضاوي)، ولا مواضع النقاط داخله؛ المهم أن تكون كل العناصر <b>داخل</b> المنحني، ولا شيء غيرها.</p>"}, {"id": "l2q5", "no": "5", "type": "mcq", "src": "تطبيق إداري", "text": "في شركة، <span class=\"m\">T</span> مجموعة موظفي التسويق و <span class=\"m\">E</span> مجموعة من يتقنون الإنجليزية. رُسِم مخطط ڤن فوجدنا موظفاً واقعاً داخل <span class=\"m\">T</span> وخارج <span class=\"m\">E</span>. ماذا يعني ذلك؟", "options": ["يعمل في التسويق ويتقن الإنجليزية", "يعمل في التسويق ولا يتقن الإنجليزية", "لا يعمل في التسويق ويتقن الإنجليزية", "لا يعمل في التسويق ولا يتقن الإنجليزية"], "answer": 1, "sol": "داخل <span class=\"m\">T</span> يعني <span class=\"m\">∈ T</span> (يعمل في التسويق)، وخارج <span class=\"m\">E</span> يعني <span class=\"m\">∉ E</span> (لا يتقن الإنجليزية)."}]); QM.start();</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مجموعة القوة P(A) والضرب الديكارتي A × B | الفصل الأول: المجموعات</title>
+<meta name="description" content="كل المجموعات الجزئية الممكنة في مجموعة واحدة، وكل الأزواج المرتبة الممكنة — أساس العدّ والاحتمال.">
+<meta name="author" content="كلية الأعمال والاقتصاد - جامعة القصيم">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='18' fill='none' stroke='%231d6fb8' stroke-width='5'/%3E%3Ccircle cx='40' cy='32' r='18' fill='none' stroke='%23b5316b' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){try{var t=localStorage.getItem('qm1:theme');
+if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-in">
+  <a class="brandmark" href="index.html"><span class="dot"></span><span>الفصل الأول: المجموعات <span class="full">— دروس تفاعلية</span></span></a>
+  <span class="spacer"></span>
+  <button class="iconbtn" id="themeBtn">🌙 <span>وضع ليلي</span></button>
+  <a class="iconbtn" href="index.html">☰ الفهرس</a>
+</div></header>
+<main class="wrap">
+<div class="page-head"><p class="eyebrow">الدرس السابع · العمليات على المجموعات (3)</p><h1>مجموعة القوة P(A) والضرب الديكارتي A × B</h1><p class="lead">كل المجموعات الجزئية الممكنة في مجموعة واحدة، وكل الأزواج المرتبة الممكنة — أساس العدّ والاحتمال.</p></div>
+<div class="tip"><span class="tag">أهداف الدرس</span><ul style="margin:.2rem 0;padding-inline-start:1.2rem"><li>أن يكوّن الطالب مجموعة القوة لمجموعة منتهية.</li><li>أن يستخدم القاعدة <span class="m">|P(A)| = 2ⁿ</span>.</li><li>أن يوجد الضرب الديكارتي ويحسب <span class="m">|A × B| = |A|·|B|</span>.</li></ul></div>
+
+<h2>1-8-5 مجموعة القوة</h2>
+<div class="def"><span class="tag">مجموعة القوة</span>من أجل أي مجموعة <span class="m">A</span> نعرّف مجموعة القوة لها بأنها مجموعة <b>كل المجموعات الجزئية</b> من <span class="m">A</span>:<div class="mb"><span class="m">P(A) = {X ; X ⊆ A}</span></div></div>
+<p>فمثلاً من أجل <span class="m">A = {1, 2}</span> نحصل على:</p>
+<div class="mb"><span class="m">P(A) = { ∅, {1}, {2}, {1,2} }</span></div>
+<div class="note"><span class="tag">ملاحظة (1-2)</span><ul style="margin:.2rem 0;padding-inline-start:1.2rem"><li>لأن <span class="m">A ⊆ A</span> فإن <span class="m">A ∈ P(A)</span>، ولأن <span class="m">∅ ⊆ A</span> فإن <span class="m">∅ ∈ P(A)</span>. إذن مجموعة القوة لا تكون خالية أبداً.</li><li>إذا كانت <span class="m">|A| = n</span> فإن <div class="mb"><span class="m">|P(A)| = 2ⁿ</span></div></li><li>انتبه للفرق: <span class="m">{1} ⊆ A</span> بينما <span class="m">{1} ∈ P(A)</span>.</li></ul></div>
+
+<div class="figure">
+<svg class="svgbox" viewBox="0 0 560 200" style="width:100%;max-width:560px" role="img">
+  <text x="280" y="22" text-anchor="middle" font-size="15" fill="var(--fg2)">بناء P({1,2,3}) — كل عنصر: إمّا نأخذه أو نتركه</text>
+  <g font-family="Cambria Math,serif" font-size="15" fill="var(--fg)" text-anchor="middle">
+    <rect x="14"  y="46" width="86" height="34" rx="8" fill="none" stroke="var(--line2)"/><text x="57" y="68">∅</text>
+    <rect x="112" y="46" width="86" height="34" rx="8" fill="none" stroke="var(--setA)"/><text x="155" y="68">{1}</text>
+    <rect x="210" y="46" width="86" height="34" rx="8" fill="none" stroke="var(--setA)"/><text x="253" y="68">{2}</text>
+    <rect x="308" y="46" width="86" height="34" rx="8" fill="none" stroke="var(--setA)"/><text x="351" y="68">{3}</text>
+    <rect x="14"  y="98" width="86" height="34" rx="8" fill="none" stroke="var(--setB)"/><text x="57" y="120">{1,2}</text>
+    <rect x="112" y="98" width="86" height="34" rx="8" fill="none" stroke="var(--setB)"/><text x="155" y="120">{1,3}</text>
+    <rect x="210" y="98" width="86" height="34" rx="8" fill="none" stroke="var(--setB)"/><text x="253" y="120">{2,3}</text>
+    <rect x="308" y="98" width="118" height="34" rx="8" fill="none" stroke="var(--setC)"/><text x="367" y="120">{1,2,3}</text>
+  </g>
+  <text x="280" y="164" text-anchor="middle" font-size="16" fill="var(--accent)" font-weight="bold">العدد الكلي = 2³ = 8 مجموعات جزئية</text>
+</svg>
+</div>
+
+<h2>1-8-6 الضرب الديكارتي</h2>
+<div class="def"><span class="tag">الزوج المرتّب والضرب الديكارتي</span>من أجل <span class="m">a ∈ A</span> و <span class="m">b ∈ B</span> نسمّي <span class="m">(a, b)</span> <b>الثنائية المرتّبة</b>، ونعرّف حاصل الضرب الديكارتي:<div class="mb"><span class="m">A × B = {(a, b) ; a ∈ A , b ∈ B}</span></div>ويُسمّى <span class="m">a</span> المركّبة الأولى و <span class="m">b</span> المركّبة الثانية. وعندما <span class="m">B = A</span> نكتب <span class="m">A² = A × A</span>.</div>
+<div class="note"><span class="tag">خواص الضرب الديكارتي</span><div class="scrollx"><table class="tbl"><tr><td><span class="m">(A × B = ∅) ⟺ (A = ∅ or B = ∅)</span></td></tr><tr><td><span class="m">A × (B ∩ C) = (A × B) ∩ (A × C)</span></td></tr><tr><td><span class="m">A × (B ∪ C) = (A × B) ∪ (A × C)</span></td></tr><tr><td><span class="m">|A × B| = |A| · |B|</span> &nbsp;(للمجموعات المنتهية)</td></tr></table></div><p style="margin:.3rem 0 0"><b>مهم:</b> الترتيب داخل الثنائية يهم، فـ <span class="m">(1,2) ≠ (2,1)</span>، ولذلك <span class="m">A × B ≠ B × A</span> عموماً.</p></div>
+
+<div class="tip"><span class="tag">لماذا نحتاجها في الأعمال؟</span>إذا كانت <span class="m">A</span> مجموعة 3 منتجات و <span class="m">B</span> مجموعة 4 فروع، فإن <span class="m">A × B</span> هي كل الثنائيات (منتج، فرع) الممكنة، وعددها <span class="m">3 × 4 = 12</span> — وهذه هي بالضبط عدد خلايا جدول المبيعات الذي ستبنيه.</div>
+<div class="figure">
+<svg class="svgbox" viewBox="0 0 460 210" style="width:100%;max-width:460px" role="img">
+  <text x="230" y="18" text-anchor="middle" font-size="14" fill="var(--fg2)">A = {1, 2, 3} ، B = {a, b} ⟸ A × B كشبكة</text>
+  <g stroke="var(--line2)" stroke-width="1"><line x1="70" y1="40" x2="70" y2="180"/><line x1="70" y1="180" x2="400" y2="180"/></g>
+  <g font-family="Cambria Math,serif" font-size="15" fill="var(--fg2)" text-anchor="middle">
+    <text x="150" y="198">1</text><text x="235" y="198">2</text><text x="320" y="198">3</text>
+    <text x="54" y="130" font-style="italic">a</text><text x="54" y="70" font-style="italic">b</text>
+    <text x="42" y="34">B</text><text x="410" y="184">A</text>
+  </g>
+  <g fill="var(--accent)">
+    <circle cx="150" cy="125" r="6"/><circle cx="235" cy="125" r="6"/><circle cx="320" cy="125" r="6"/>
+    <circle cx="150" cy="65" r="6"/><circle cx="235" cy="65" r="6"/><circle cx="320" cy="65" r="6"/>
+  </g>
+  <g font-family="Cambria Math,serif" font-size="12" fill="var(--fg3)" text-anchor="middle">
+    <text x="150" y="146">(1,a)</text><text x="235" y="146">(2,a)</text><text x="320" y="146">(3,a)</text>
+    <text x="150" y="52">(1,b)</text><text x="235" y="52">(2,b)</text><text x="320" y="52">(3,b)</text>
+  </g>
+</svg>
+</div>
+
+<h2>تمارين تفاعلية</h2>
+<p class="lead">اكتب إجابتك ثم اضغط <b>تحقق</b>. وإن أردت خطوات الحل اضغط <b>إظهار الحل</b>.</p>
+<div id="qs"></div>
+<div id="scorePanel"></div>
+<nav class="nav-lr"><a href="l6.html">◀ الفرق والمتممة ودي مورغان</a><a href="l8.html">تطبيقات اقتصادية وإدارية ▶</a></nav>
+<footer class="ft">
+مبادئ الرياضيات لكليات إدارة الأعمال — دروس وتمارين · الفصل الأول: المجموعات (الفئات)<br>
+كلية الأعمال والاقتصاد، جامعة القصيم · إعداد الدروس التفاعلية للمستوى التحضيري<br>
+تُحفظ إجاباتك في متصفحك فقط.
+</footer>
+</main>
+<script src="venn.js"></script>
+<script>window.LESSON_ID="l7";</script>
+<script src="app.js"></script>
+<script>QM.render("qs", [{"id": "l7q1", "no": "1", "type": "fill", "src": "مثال (1-24) من الكتاب", "text": "لتكن <span class=\"m\">Ω = {1,2,3,4,5,6}</span>، <span class=\"m\">A = {1,2,4}</span>، <span class=\"m\">B = {4,5}</span>، <span class=\"m\">C = {6}</span>. أوجد:", "fields": [{"pre": "P(A) =", "ltr": true, "mode": "set", "answer": ["{∅,{1},{2},{4},{1,2},{1,4},{2,4},{1,2,4}}"]}, {"pre": "P(B) =", "ltr": true, "mode": "set", "answer": ["{∅,{4},{5},{4,5}}"]}, {"pre": "P(C) =", "ltr": true, "mode": "set", "answer": ["{∅,{6}}"]}, {"pre": "|P(A ∩ B)| =", "ltr": true, "mode": "num", "answer": "2"}], "sol": "<ol><li><span class=\"m\">|A| = 3</span> فعدد المجموعات الجزئية <span class=\"m\">2³ = 8</span>:<br><span class=\"m\">P(A) = {∅, {1}, {2}, {4}, {1,2}, {1,4}, {2,4}, {1,2,4}}</span></li><li><span class=\"m\">P(B) = {∅, {4}, {5}, {4,5}}</span> وعددها <span class=\"m\">2² = 4</span></li><li><span class=\"m\">P(C) = {∅, {6}}</span> وعددها <span class=\"m\">2¹ = 2</span></li><li><span class=\"m\">A ∩ B = {4}</span> ⟹ <span class=\"m\">|P(A ∩ B)| = 2¹ = 2</span></li></ol><div class=\"note\"><span class=\"tag\">تنبيه في الكتابة</span>عناصر <span class=\"m\">P(A)</span> هي <b>مجموعات</b>، فيجب كتابة الأقواس الداخلية: <span class=\"m\">{1}</span> وليس <span class=\"m\">1</span>.</div>"}, {"id": "l7q2", "no": "2", "type": "fill", "src": "مثال (1-24) من الكتاب — تتمة", "text": "بنفس معطيات السؤال السابق أوجد:", "fields": [{"pre": "P(<span class=\"bar\">A ∪ B</span>) =", "ltr": true, "mode": "set", "answer": ["{∅,{3},{6},{3,6}}"]}, {"pre": "P(C ∖ B) =", "ltr": true, "mode": "set", "answer": ["{∅,{6}}"]}, {"pre": "P((A ∩ B) ∪ C) =", "ltr": true, "mode": "set", "answer": ["{∅,{4},{6},{4,6}}"]}], "sol": "<ol><li><span class=\"m\">A ∪ B = {1,2,4,5}</span> ⟹ <span class=\"bar\"><span class=\"m\">A ∪ B</span></span><span class=\"m\"> = {3,6}</span> ⟹ <span class=\"m\">P = {∅, {3}, {6}, {3,6}}</span></li><li><span class=\"m\">C ∖ B = {6} ∖ {4,5} = {6}</span> ⟹ <span class=\"m\">P = {∅, {6}}</span></li><li><span class=\"m\">(A ∩ B) ∪ C = {4} ∪ {6} = {4,6}</span> ⟹ <span class=\"m\">P = {∅, {4}, {6}, {4,6}}</span></li></ol>"}, {"id": "l7q3", "no": "3", "type": "fill", "src": "مثال (1-25) من الكتاب", "text": "لتكن <span class=\"m\">A = {1,2,3}</span> و <span class=\"m\">B = {a,b}</span>. أوجد <span class=\"m\">A × B</span> و <span class=\"m\">B × A</span> وعدد عناصر <span class=\"m\">A²</span>.", "fields": [{"pre": "A × B =", "ltr": true, "mode": "set", "answer": ["{(1,a),(1,b),(2,a),(2,b),(3,a),(3,b)}"]}, {"pre": "B × A =", "ltr": true, "mode": "set", "answer": ["{(a,1),(a,2),(a,3),(b,1),(b,2),(b,3)}"]}, {"pre": "|A²| =", "ltr": true, "mode": "num", "answer": "9"}], "sol": "<ol><li><span class=\"m\">A × B = {(1,a), (1,b), (2,a), (2,b), (3,a), (3,b)}</span> وعددها <span class=\"m\">3 × 2 = 6</span></li><li><span class=\"m\">B × A = {(a,1), (a,2), (a,3), (b,1), (b,2), (b,3)}</span></li><li><span class=\"m\">A² = A × A</span> وعدد عناصرها <span class=\"m\">3 × 3 = 9</span></li></ol><div class=\"tip\"><span class=\"tag\">ماذا تلاحظ؟</span><span class=\"m\">A × B ≠ B × A</span> — العدد نفسه لكن الأزواج مختلفة، لأن ترتيب المركّبتين يهم.</div>"}, {"id": "l7q4", "no": "4", "type": "fill", "src": "مثال (1-26) من الكتاب", "text": "لتكن <span class=\"m\">A = {1,2,x,y}</span> و <span class=\"m\">B = {2,3,t}</span>. أوجد أعداد العناصر التالية:", "fields": [{"pre": "|A²| =", "ltr": true, "mode": "num", "answer": "16"}, {"pre": "|B²| =", "ltr": true, "mode": "num", "answer": "9"}, {"pre": "|(A ∪ B) × B| =", "ltr": true, "mode": "num", "answer": "18"}, {"pre": "|A × B| =", "ltr": true, "mode": "num", "answer": "12"}], "sol": "<p><span class=\"m\">|A| = 4</span>، <span class=\"m\">|B| = 3</span>، <span class=\"m\">A ∪ B = {1,2,x,y,3,t}</span> فـ <span class=\"m\">|A ∪ B| = 6</span>.</p><ol><li><span class=\"m\">|A²| = 4 × 4 = 16</span></li><li><span class=\"m\">|B²| = 3 × 3 = 9</span></li><li><span class=\"m\">|(A ∪ B) × B| = 6 × 3 = 18</span></li><li><span class=\"m\">|A × B| = 4 × 3 = 12</span></li></ol><p>ومثال على السرد: <span class=\"m\">A × B = {(1,2),(1,3),(1,t),(2,2),(2,3),(2,t),(x,2),(x,3),(x,t),(y,2),(y,3),(y,t)}</span>.</p>"}, {"id": "l7q5", "no": "5", "type": "fill", "src": "مثال (1-27) من الكتاب — تجربة النرد مرتين", "text": "في تجربة رمي حجر نرد متوازن مرتين متتاليتين، فضاء العينة هو <span class=\"m\">Ω = {(i,j) ; 1 ≤ i ≤ 6 and 1 ≤ j ≤ 6}</span>. ولتكن <span class=\"m\">A = {(i,j) ∈ Ω ; i &gt; j}</span> و <span class=\"m\">B = {(i,j) ∈ Ω ; i ≤ j}</span>.", "fields": [{"pre": "|Ω| =", "ltr": true, "mode": "num", "answer": "36"}, {"pre": "|A| =", "ltr": true, "mode": "num", "answer": "15"}, {"pre": "A ∩ B =", "ltr": true, "mode": "set", "answer": ["∅", "{}"], "show": "∅"}, {"pre": "|A ∪ B| =", "ltr": true, "mode": "num", "answer": "36"}], "sol": "<ol><li><span class=\"m\">Ω = {1,…,6} × {1,…,6}</span> ⟹ <span class=\"m\">|Ω| = 6 × 6 = 36</span></li><li><span class=\"m\">A</span> هي الأزواج التي فيها الأول أكبر من الثاني. عددها: للحالة <span class=\"m\">i = j</span> هناك 6 أزواج، ويتقاسم الباقي (<span class=\"m\">36 − 6 = 30</span>) مناصفةً بين <span class=\"m\">i &gt; j</span> و <span class=\"m\">i &lt; j</span> ⟹ <span class=\"m\">|A| = 15</span></li><li><span class=\"m\">A</span> تشترط <span class=\"m\">i &gt; j</span> و <span class=\"m\">B</span> تشترط <span class=\"m\">i ≤ j</span>، ولا يجتمعان ⟹ <span class=\"m\">A ∩ B = ∅</span></li><li>الشرطان يغطيان كل الحالات ⟹ <span class=\"m\">A ∪ B = Ω</span> و <span class=\"m\">|A ∪ B| = 36</span></li></ol><p>ونقول عندئذ إن <span class=\"m\">A</span> و <span class=\"m\">B</span> <b>تجزئة</b> لفضاء العينة، وهو مفهوم أساسي في مقرر الإحصاء.</p>"}, {"id": "l7q6", "no": "6", "type": "mcq", "src": "إضافة تدريبية", "text": "إذا كان <span class=\"m\">|P(A)| = 32</span> فما عدد عناصر <span class=\"m\">A</span>؟", "options": ["4", "5", "6", "16"], "answer": 1, "sol": "نحل المعادلة <span class=\"m\">2ⁿ = 32</span>. وبما أن <span class=\"m\">2⁵ = 32</span> فإن <span class=\"m\">n = 5</span>."}, {"id": "l7q7", "no": "7", "type": "fill", "src": "تطبيق إداري", "text": "شركة تبيع 4 منتجات في 5 فروع، وتريد جدولاً يضم كل ثنائية (منتج، فرع).", "fields": [{"pre": "عدد الثنائيات =", "mode": "num", "answer": "20"}, {"pre": "عدد المجموعات الجزئية الممكنة من مجموعة المنتجات الأربعة =", "mode": "num", "answer": "16"}], "sol": "<ol><li>عدد الثنائيات هو <span class=\"m\">|A × B| = 4 × 5 = 20</span> ثنائية، وهي عدد خلايا الجدول.</li><li>عدد المجموعات الجزئية <span class=\"m\">= 2⁴ = 16</span> — وهي كل «الحزم» الممكنة من المنتجات، بما فيها الحزمة الخالية وحزمة المنتجات الأربعة.</li></ol>"}]); QM.start();</script>
+</body>
+</html>
