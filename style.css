@@ -232,3 +232,4 @@ select.ans{
 select.ans option{background:var(--bg2);color:var(--fg)}
 select.ans:focus{outline:2px solid var(--brand);outline-offset:1px}
 .inrow .pre{line-height:1.9}
+.lcard .pv{direction:ltr;display:inline-block;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
