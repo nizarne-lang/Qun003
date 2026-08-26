@@ -220,11 +220,14 @@
         if (f.pre) row.appendChild(el('span', 'pre', f.pre));
         var inp;
         if (f.options) {
-          inp = el('select', 'ans' + (f.rtl ? ' rtl' : ''));
+          // رموز الرياضيات (∈ ∉ ⊆ ⊈) تنعكس بصرياً داخل عنصر باتجاه rtl،
+          // فنُجبر القائمة على الاتجاه ltr عندما تكون خياراتها رموزاً.
+          var isSym = f.mode === 'sym' || f.options.every(function (o) { return !/[\u0600-\u06FF]/.test(o); });
+          inp = el('select', 'ans' + (f.rtl ? ' rtl' : '') + (isSym ? ' symsel' : ''));
           inp.style.flex = '0 0 auto';
-          inp.style.minWidth = '9rem';
           inp.innerHTML = '<option value="">— اختر —</option>' +
             f.options.map(function (o) { return '<option value="' + o + '">' + o + '</option>'; }).join('');
+          inp.style.minWidth = isSym ? '5.5rem' : '9rem';
         } else {
           inp = el('input', 'ans' + (f.rtl ? ' rtl' : ''));
           inp.type = 'text';

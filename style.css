@@ -233,3 +233,15 @@ select.ans option{background:var(--bg2);color:var(--fg)}
 select.ans:focus{outline:2px solid var(--brand);outline-offset:1px}
 .inrow .pre{line-height:1.9}
 .lcard .pv{direction:ltr;display:inline-block;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+
+/* رموز الرياضيات داخل القوائم المنسدلة: اتجاه ltr يمنع انعكاسها بصرياً */
+select.ans.symsel{
+  direction:ltr;text-align:center;text-align-last:center;
+  font-family:"Cambria Math","Times New Roman",serif;font-size:1.15rem;
+  padding-inline-start:.6rem;padding-inline-end:1.9rem;
+  background-position:calc(100% - 1.15rem) calc(50% + 1px), calc(100% - 0.85rem) calc(50% + 1px);
+}
+select.ans.symsel option{font-size:1rem}
+/* لا تُضاعف حجم الخط عند تداخل عبارات الرياضيات */
+.m .m,.mb .m{font-size:1em}
+.bar{padding-inline:1px}
