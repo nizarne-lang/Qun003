@@ -3,115 +3,284 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>الفصل الأول: المجموعات — دروس تفاعلية</title>
-<meta name="description" content="دروس تفاعلية للفصل الأول (المجموعات) من كتاب مبادئ الرياضيات لكليات إدارة الأعمال.">
+<title>مبادئ الرياضيات لكليات إدارة الأعمال — الدروس التفاعلية</title>
+<meta name="description" content="الدروس التفاعلية لكتاب مبادئ الرياضيات لكليات إدارة الأعمال — كلية الأعمال والاقتصاد، جامعة القصيم.">
 <meta name="author" content="كلية الأعمال والاقتصاد - جامعة القصيم">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='32' r='18' fill='none' stroke='%231d6fb8' stroke-width='5'/%3E%3Ccircle cx='40' cy='32' r='18' fill='none' stroke='%23b5316b' stroke-width='5'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d6fb8'/%3E%3Ctext x='32' y='45' font-size='34' text-anchor='middle' fill='white' font-family='serif'%3E472%3C/text%3E%3C/svg%3E">
 <script>
-(function(){try{var t=localStorage.getItem('qm1:theme');
+(function(){try{var t=localStorage.getItem('qm:theme')||localStorage.getItem('qm2:theme')||localStorage.getItem('qm1:theme');
 if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
 document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
 </script>
+<style>
+:root{
+  --bg:#f6f7fb; --bg2:#ffffff; --bg3:#eef1f8;
+  --fg:#16202e; --fg2:#4a5a70; --fg3:#7d8ba0;
+  --line:#dde3ee; --line2:#c8d1e2;
+  --brand:#1d6fb8; --brand2:#0f4f88; --brandSoft:#e3eefa;
+  --accent:#b5316b; --accentSoft:#fbe6ef;
+  --ok:#0f8a5f; --okSoft:#e2f6ee;
+  --warn:#b4740b; --warnSoft:#fdf2df;
+  --shadow:0 1px 2px rgba(20,35,60,.06),0 8px 24px rgba(20,35,60,.07);
+}
+[data-theme="dark"]{
+  --bg:#0e131c; --bg2:#161d2a; --bg3:#1d2534;
+  --fg:#e8edf6; --fg2:#a9b6cb; --fg3:#7d8ba0;
+  --line:#2a3446; --line2:#3a4760;
+  --brand:#5aa9ee; --brand2:#8cc5f8; --brandSoft:#16304a;
+  --accent:#f07ab0; --accentSoft:#3a1b2b;
+  --ok:#3ecf9a; --okSoft:#123328;
+  --warn:#f0b95a; --warnSoft:#332715;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);direction:rtl;
+  font-family:"Segoe UI","Noto Naskh Arabic","Tahoma",system-ui,sans-serif;
+  font-size:17px;line-height:1.9;transition:background .25s,color .25s}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg2);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1000px;margin:0 auto;padding:.55rem 1rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.brandmark{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:.98rem;color:var(--fg)}
+.brandmark .dot{width:26px;height:26px;border-radius:8px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--brand),var(--accent))}
+.spacer{flex:1}
+.iconbtn{border:1px solid var(--line2);background:var(--bg2);color:var(--fg);border-radius:10px;
+  padding:.34rem .7rem;cursor:pointer;font:inherit;font-size:.85rem;display:inline-flex;align-items:center;gap:.35rem}
+.iconbtn:hover{background:var(--bg3)}
+
+.wrap{max-width:1000px;margin:0 auto;padding:1.1rem 1rem 3rem}
+.page-head{margin:1rem 0 1.6rem}
+.eyebrow{color:var(--accent);font-weight:700;font-size:.83rem;margin:0 0 .2rem}
+h1{font-size:1.8rem;line-height:1.45;margin:.1rem 0 .5rem;font-weight:800}
+h2{font-size:1.2rem;margin:2.2rem 0 .8rem;font-weight:800;border-right:4px solid var(--brand);padding-right:.6rem}
+.lead{color:var(--fg2);font-size:1rem;margin:.4rem 0}
+
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;
+  padding:1rem 1.05rem;box-shadow:var(--shadow);margin:.9rem 0}
+.note{border-right:4px solid var(--warn);background:var(--warnSoft);border-radius:10px;
+  padding:.7rem .9rem;margin:1rem 0;font-size:.95rem}
+.note .tag{display:block;font-weight:800;color:var(--warn);font-size:.9rem;margin-bottom:.1rem}
+
+.chapters{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:.85rem;margin-top:1rem}
+.ch{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:14px;
+  padding:1rem 1.1rem;box-shadow:var(--shadow);color:var(--fg);transition:.18s;position:relative}
+.ch:hover{transform:translateY(-2px);border-color:var(--brand);text-decoration:none}
+.ch .n{font-size:.78rem;font-weight:800;color:var(--accent);letter-spacing:.02em}
+.ch .t{font-weight:800;font-size:1.12rem;margin:.2rem 0 .3rem}
+.ch .d{color:var(--fg2);font-size:.9rem;line-height:1.75;min-height:3.4rem}
+.ch .meta{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem}
+.tagpill{font-size:.76rem;font-weight:700;border-radius:99px;padding:.12rem .6rem;
+  border:1px solid var(--line2);background:var(--bg3);color:var(--fg2)}
+.ch .prog{margin-top:.7rem;display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:var(--fg2)}
+.bar-track{flex:1;min-width:80px;height:8px;background:var(--bg3);border-radius:99px;
+  overflow:hidden;border:1px solid var(--line)}
+.bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--ok));transition:width .5s}
+.pv{direction:ltr;display:inline-block;unicode-bidi:isolate;font-variant-numeric:tabular-nums;font-weight:700}
+
+.ch.soon{opacity:.62;cursor:default;pointer-events:none;border-style:dashed}
+.ch.soon .t{color:var(--fg2)}
+.badge-soon{position:absolute;inset-inline-end:1rem;top:1rem;font-size:.72rem;font-weight:800;
+  color:var(--fg3);border:1px solid var(--line2);border-radius:99px;padding:.05rem .5rem;
+  background:var(--bg3)}
+.ch.soon .n{padding-inline-end:5.5rem}
+
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.7rem;margin:.9rem 0 .2rem}
+.stat{background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem;text-align:center}
+.stat .v{font-size:1.55rem;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+.stat .k{color:var(--fg2);font-size:.84rem}
+
+table.tbl{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:.93rem}
+table.tbl th,table.tbl td{border:1px solid var(--line2);padding:.45rem .6rem;text-align:center}
+table.tbl th{background:var(--bg3);font-weight:700}
+.scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+footer.ft{margin-top:2.6rem;padding-top:1rem;border-top:1px solid var(--line);
+  color:var(--fg3);font-size:.85rem;text-align:center;line-height:1.9}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  h1{font-size:1.4rem}
+  .wrap{padding:.8rem .8rem 2.5rem}
+  .ch .d{min-height:0}
+  .brandmark span.full{display:none}
+}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-in">
-  <a class="brandmark" href="index.html"><span class="dot"></span><span>الفصل الأول: المجموعات <span class="full">— دروس تفاعلية</span></span></a>
+  <span class="brandmark"><span class="dot"></span><span>مبادئ الرياضيات <span class="full">لكليات إدارة الأعمال</span></span></span>
   <span class="spacer"></span>
   <button class="iconbtn" id="themeBtn">🌙 <span>وضع ليلي</span></button>
-  <a class="iconbtn" href="index.html">☰ الفهرس</a>
 </div></header>
+
 <main class="wrap">
 
 <div class="page-head">
-  <p class="eyebrow">مبادئ الرياضيات لكليات إدارة الأعمال — دروس وتمارين</p>
-  <h1>الفصل الأول: المجموعات (الفئات)</h1>
-  <p class="lead">تسعة دروس تفاعلية للمستوى التحضيري في كلية الأعمال والاقتصاد، بمخططات ڤن تفاعلية،
-  وتصحيح فوري لكل سؤال، وخيار «إظهار الحل» في كل تمرين، ولوحة نتيجة إجمالية تتابع تقدّمك.</p>
+  <p class="eyebrow">472 — دروس وتمارين · المستوى التحضيري</p>
+  <h1>مبادئ الرياضيات لكليات إدارة الأعمال</h1>
+  <p class="lead">الدروس التفاعلية المصاحبة للكتاب: شرحٌ مختصر لكل بند، ورسوم ومخططات توضيحية،
+  وأسئلة مأخوذة من أمثلة الكتاب وتمارينه بتصحيح فوري، وخيار «إظهار الحل» في كل سؤال.</p>
+  <p class="lead">اختر الفصل الذي تدرسه الآن. ويُحفظ تقدّمك في متصفحك تلقائياً، فتستأنف من حيث توقّفت.</p>
 </div>
 
 <div class="card">
-  <h2 style="margin-top:.2rem">نتيجتك الإجمالية في الفصل</h2>
+  <h2 style="margin-top:.2rem;border:0;padding:0;font-size:1.1rem">تقدّمك في الفصول المنشورة</h2>
   <div class="dash">
-    <div class="stat"><div class="v" id="sOk">0</div><div class="k">إجابات صحيحة</div></div>
-    <div class="stat"><div class="v" id="sDone">0</div><div class="k">أسئلة مُجابة</div></div>
-    <div class="stat"><div class="v" id="sTotal">100</div><div class="k">مجموع الأسئلة</div></div>
-    <div class="stat"><div class="v" id="sPct">0%</div><div class="k">نسبة الإتقان</div></div>
+    <div class="stat"><div class="v" id="gOk">0</div><div class="k">إجابات صحيحة</div></div>
+    <div class="stat"><div class="v" id="gDone">0</div><div class="k">أسئلة مُجابة</div></div>
+    <div class="stat"><div class="v" id="gTotal">0</div><div class="k">مجموع الأسئلة</div></div>
+    <div class="stat"><div class="v" id="gPct">0%</div><div class="k">نسبة الإتقان</div></div>
   </div>
-  <div class="score-row" style="margin-top:.4rem">
+  <div style="display:flex;align-items:center;gap:.6rem;margin-top:.6rem">
     <div class="bar-track" style="height:12px"><div class="bar-fill" id="gBar"></div></div>
   </div>
-  <p id="gMsg" class="lead" style="margin:.6rem 0 0"></p>
-  <div class="btns"><button class="btn ghost" id="resetEverything">↺ تصفير كل النتائج</button></div>
+  <p class="lead" id="gMsg" style="margin:.6rem 0 0"></p>
 </div>
 
-<h2>الدروس</h2>
-<div class="lessons"><a class="lcard" href="l1.html" data-l="l1"><div class="n">الدرس 1 · البند 1-1 → 1-3</div><div class="t">مفهوم المجموعة وطرق التعبير عنها</div><div class="d">ما المجموعة؟ وكيف نكتبها بطريقة السرد وبطريقة الصفة المميزة؟ ومتى نستخدم الرمزين ∈ و ∉؟</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 10</span></div></a><a class="lcard" href="l2.html" data-l="l2"><div class="n">الدرس 2 · البند 1-4</div><div class="t">أشكال ڤن وتمثيل المجموعة</div><div class="d">كيف نرسم المجموعة؟ ولماذا يجعل الرسمُ الحكمَ على الانتماء أسهل بكثير من الرموز وحدها؟</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 4</span></div></a><a class="lcard" href="l3.html" data-l="l3"><div class="n">الدرس 3 · البند 1-5</div><div class="t">العلاقة بين مجموعتين: الاحتواء والتساوي</div><div class="d">متى نقول إن مجموعة جزئية من أخرى؟ ومتى تتساوى مجموعتان؟ وما الفرق الجوهري بين ∈ و ⊆؟</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 7</span></div></a><a class="lcard" href="l4.html" data-l="l4"><div class="n">الدرس 4 · البند 1-6 و 1-7</div><div class="t">المجموعة الخالية والمجموعات المنتهية</div><div class="d">المجموعة التي لا تحوي شيئاً، والمجموعة التي لا ينتهي عدّها — ومفهوم |A| الذي سنستعمله في كل ما بعده.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 6</span></div></a><a class="lcard" href="l5.html" data-l="l5"><div class="n">الدرس 5 · البند 1-8-1 و 1-8-2</div><div class="t">الاتحاد والتقاطع</div><div class="d">«أو» تعطي الاتحاد، و«و» تعطي التقاطع. عمليتان تُبنى عليهما بقية الفصل، وكل قوانين الاحتمال بعده.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 8</span></div></a><a class="lcard" href="l6.html" data-l="l6"><div class="n">الدرس 6 · البند 1-8-3 و 1-8-4</div><div class="t">الفرق والمتممة ودي مورغان</div><div class="d">ماذا يبقى في A بعد استبعاد B؟ وما «كل ما ليس في A»؟ وقانونان يقلبان الاتحاد تقاطعاً.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 7</span></div></a><a class="lcard" href="l7.html" data-l="l7"><div class="n">الدرس 7 · البند 1-8-5 و 1-8-6</div><div class="t">مجموعة القوة والضرب الديكارتي</div><div class="d">كل المجموعات الجزئية الممكنة في مجموعة واحدة، وكل الأزواج المرتبة الممكنة — أساس العدّ والاحتمال.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 7</span></div></a><a class="lcard" href="l8.html" data-l="l8"><div class="n">الدرس 8 · البند 1-9</div><div class="t">تطبيقات اقتصادية وإدارية</div><div class="d">كيف تحوّل مسألة كلامية عن موظفين أو طلاب أو عملاء إلى مخطط ڤن، ثم تقرأ الجواب منه مباشرة.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 6</span></div></a><a class="lcard" href="l9.html" data-l="l9"><div class="n">الدرس 9 · البند 1-10</div><div class="t">تمارين الفصل الأول — اختبار شامل</div><div class="d">كل تمارين الفصل الأول كما وردت في الكتاب، بتصحيح فوري وحلول مفصّلة ولوحة نتيجة إجمالية.</div><div class="prog"><div class="bar-track"><div class="bar-fill"></div></div><span class="pv">0 / 45</span></div></a></div>
+<h2>فصول الكتاب</h2>
+<div class="chapters" id="chapters"></div>
 
-<h2>ما الذي ستتعلمه في هذا الفصل؟</h2>
+<h2>ما الذي يميّز هذه الدروس؟</h2>
 <div class="card">
 <div class="scrollx"><table class="tbl">
-<tr><th>المفهوم</th><th>الرمز</th><th>المعنى بكلمة</th></tr>
-<tr><td>الانتماء</td><td><span class="m">∈, ∉</span></td><td>عنصر داخل مجموعة</td></tr>
-<tr><td>الاحتواء</td><td><span class="m">⊆, ⊈</span></td><td>مجموعة داخل مجموعة</td></tr>
-<tr><td>الاتحاد</td><td><span class="m">∪</span></td><td>أو</td></tr>
-<tr><td>التقاطع</td><td><span class="m">∩</span></td><td>و</td></tr>
-<tr><td>الفرق</td><td><span class="m">∖</span></td><td>ما عدا</td></tr>
-<tr><td>المتممة</td><td><span class="bar"><span class="m">A</span></span></td><td>كل ما ليس فيها</td></tr>
-<tr><td>مجموعة القوة</td><td><span class="m">P(A)</span></td><td>كل المجموعات الجزئية</td></tr>
-<tr><td>الضرب الديكارتي</td><td><span class="m">A × B</span></td><td>كل الأزواج المرتبة</td></tr>
+<tr><th>الميزة</th><th>التفصيل</th></tr>
+<tr><td>تصحيح فوري</td><td>كل سؤال يُصحَّح فور الضغط على «تحقق»، ويقبل صيغ الإجابة المختلفة</td></tr>
+<tr><td>إظهار الحل</td><td>خطوات الحل كاملة بأسلوب ملحق الكتاب، مع تنبيه على الأخطاء الشائعة</td></tr>
+<tr><td>لوحة نتيجة</td><td>نتيجتك في كل درس، وإجماليك في الفصل، وإجماليك في الكتاب هنا</td></tr>
+<tr><td>رسوم ومخططات</td><td>مخططات ڤن، خط الأعداد، أشجار العوامل، أشرطة النسب والخصم</td></tr>
+<tr><td>وضع ليلي</td><td>يعمل على الجوال والحاسب، ويُحفظ اختيارك</td></tr>
+<tr><td>تصويبات</td><td>ما ظهر من أخطاء في مفتاح إجابات الكتاب مذكورٌ في موضعه مع البرهان عليه</td></tr>
 </table></div>
 </div>
 
-<div class="note"><span class="tag">ملاحظة</span>
-تُحفظ إجاباتك ونتائجك في متصفحك أنت فقط (Local Storage)؛ لا تُرسل إلى أي خادم، ولا يراها أحد غيرك.
-وإذا فتحت الموقع من جهاز آخر ستبدأ من جديد.
+<div class="note"><span class="tag">خصوصية</span>
+تُحفظ إجاباتك ونتائجك في متصفحك أنت فقط (Local Storage)؛ لا تُرسل إلى أي خادم، ولا يراها أحد غيرك،
+ولا تُحتسب في درجات المقرر. وإذا فتحت الموقع من جهاز آخر أو متصفح آخر ستبدأ من جديد.
 </div>
+
 <footer class="ft">
-مبادئ الرياضيات لكليات إدارة الأعمال — دروس وتمارين · الفصل الأول: المجموعات (الفئات)<br>
-كلية الأعمال والاقتصاد، جامعة القصيم · إعداد الدروس التفاعلية للمستوى التحضيري<br>
-تُحفظ إجاباتك في متصفحك فقط.
+مبادئ الرياضيات لكليات إدارة الأعمال (472) — دروس وتمارين<br>
+كلية الأعمال والاقتصاد، جامعة القصيم · الدروس التفاعلية للمستوى التحضيري
 </footer>
 </main>
-<script src="venn.js"></script>
-<script>window.LESSON_ID="index";</script>
-<script src="app.js"></script>
+
 <script>
-var META = [{"id": "l1", "file": "l1.html", "no": "1-1 → 1-3", "short": "مفهوم المجموعة وطرق التعبير عنها", "lead": "ما المجموعة؟ وكيف نكتبها بطريقة السرد وبطريقة الصفة المميزة؟ ومتى نستخدم الرمزين ∈ و ∉؟", "total": 10, "idx": 1}, {"id": "l2", "file": "l2.html", "no": "1-4", "short": "أشكال ڤن وتمثيل المجموعة", "lead": "كيف نرسم المجموعة؟ ولماذا يجعل الرسمُ الحكمَ على الانتماء أسهل بكثير من الرموز وحدها؟", "total": 4, "idx": 2}, {"id": "l3", "file": "l3.html", "no": "1-5", "short": "العلاقة بين مجموعتين: الاحتواء والتساوي", "lead": "متى نقول إن مجموعة جزئية من أخرى؟ ومتى تتساوى مجموعتان؟ وما الفرق الجوهري بين ∈ و ⊆؟", "total": 7, "idx": 3}, {"id": "l4", "file": "l4.html", "no": "1-6 و 1-7", "short": "المجموعة الخالية والمجموعات المنتهية", "lead": "المجموعة التي لا تحوي شيئاً، والمجموعة التي لا ينتهي عدّها — ومفهوم |A| الذي سنستعمله في كل ما بعده.", "total": 6, "idx": 4}, {"id": "l5", "file": "l5.html", "no": "1-8-1 و 1-8-2", "short": "الاتحاد والتقاطع", "lead": "«أو» تعطي الاتحاد، و«و» تعطي التقاطع. عمليتان تُبنى عليهما بقية الفصل، وكل قوانين الاحتمال بعده.", "total": 8, "idx": 5}, {"id": "l6", "file": "l6.html", "no": "1-8-3 و 1-8-4", "short": "الفرق والمتممة ودي مورغان", "lead": "ماذا يبقى في A بعد استبعاد B؟ وما «كل ما ليس في A»؟ وقانونان يقلبان الاتحاد تقاطعاً.", "total": 7, "idx": 6}, {"id": "l7", "file": "l7.html", "no": "1-8-5 و 1-8-6", "short": "مجموعة القوة والضرب الديكارتي", "lead": "كل المجموعات الجزئية الممكنة في مجموعة واحدة، وكل الأزواج المرتبة الممكنة — أساس العدّ والاحتمال.", "total": 7, "idx": 7}, {"id": "l8", "file": "l8.html", "no": "1-9", "short": "تطبيقات اقتصادية وإدارية", "lead": "كيف تحوّل مسألة كلامية عن موظفين أو طلاب أو عملاء إلى مخطط ڤن، ثم تقرأ الجواب منه مباشرة.", "total": 6, "idx": 8}, {"id": "l9", "file": "l9.html", "no": "1-10", "short": "تمارين الفصل الأول — اختبار شامل", "lead": "كل تمارين الفصل الأول كما وردت في الكتاب، بتصحيح فوري وحلول مفصّلة ولوحة نتيجة إجمالية.", "total": 45, "idx": 9}];
-(function(){
-  function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
-  var ok=0, done=0, total=0;
-  META.forEach(function(x){
-    total += x.total;
-    var st={}; try{ st = JSON.parse(get('qm1:'+x.id)||'{}')||{}; }catch(e){}
-    var o=0,d=0;
-    Object.keys(st).forEach(function(k){ if(st[k]&&st[k].done){ d++; if(st[k].ok) o++; } });
-    if(d>x.total) d=x.total;
-    if(o>x.total) o=x.total;
-    ok+=o; done+=d;
-    var card=document.querySelector('[data-l="'+x.id+'"]');
-    if(card){
-      card.querySelector('.bar-fill').style.width=(x.total? Math.round(o/x.total*100):0)+'%';
-      card.querySelector('.pv').textContent=o+' / '+x.total;
-    }
+/* ============ بيانات الفصول ============ */
+var CH = [
+  { no: 'الفصل الأول', t: 'المجموعات (الفئات)',
+    d: 'مفهوم المجموعة وطرق كتابتها، مخططات ڤن، الاحتواء والتساوي، الاتحاد والتقاطع والفرق والمتممة، مجموعة القوة والضرب الديكارتي، وتطبيقات إدارية.',
+    url: 'https://nizarne-lang.github.io/Qun003-ch1/',
+    pfx: 'qm1:', lessons: 9,
+    totals: { l1:10, l2:4, l3:7, l4:6, l5:8, l6:7, l7:7, l8:6, l9:45 } },
+
+  { no: 'الفصل الثاني', t: 'مجموعات الأعداد',
+    d: 'الأعداد الطبيعية والمضاعفات والقواسم، الأعداد الأولية والتحليل، GCD و LCM، الكسور والنسبة والنسبة المئوية، الخصم والضريبة، الأسس والجذور، وترتيب العمليات.',
+    url: 'https://nizarne-lang.github.io/Qun003-ch2/',
+    pfx: 'qm2:', lessons: 13,
+    totals: { l1:13, l2:12, l3:13, l4:10, l5:9, l6:11, l7:14, l8:12, l9:9, l10:13, l11:9, l12:22, l13:23 } },
+
+  { no: 'الفصل الثالث', t: 'كثيرات الحدود والمقادير النسبية', soon: 1,
+    d: 'الحد الجبري وكثيرات الحدود، قيمة كثيرة الحدود عند نقطة، العمليات عليها وتحليلها، وتبسيط المقادير النسبية.' },
+
+  { no: 'الفصل الرابع', t: 'المعادلات والمتراجحات', soon: 1,
+    d: 'المعادلات من الدرجة الأولى والثانية، المتراجحات، وتطبيقاتها في مسائل الأعمال.' },
+
+  { no: 'الفصل الخامس', t: 'الدوال وتطبيقاتها الاقتصادية', soon: 1,
+    d: 'مفهوم الدالة ومجالها، دوال التكلفة والإيراد والربح، ونقطة التعادل وفائض المستهلك.' },
+
+  { no: 'الفصل السادس', t: 'المستقيم والقطع المكافئ', soon: 1,
+    d: 'معادلة المستقيم وميله، القطع المكافئ ورأسه، وتطبيقات على العرض والطلب.' }
+];
+
+/* ============ قراءة التقدّم من التخزين المحلي ============ */
+function get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+
+/* تمييز العدد في العربية: 3–10 جمع، 11–99 مفرد منصوب، والمئات مفرد مجرور */
+function countWord(n, few, many, hundred){
+  if (n % 100 === 0) return n + ' ' + hundred;
+  var r = n % 100;
+  if (r >= 3 && r <= 10) return n + ' ' + few;
+  return n + ' ' + many;
+}
+
+function chapterProgress(c){
+  var total = 0, ok = 0, done = 0;
+  if (!c.totals) return { total:0, ok:0, done:0, pct:0 };
+  Object.keys(c.totals).forEach(function(lid){
+    var cap = c.totals[lid];
+    total += cap;
+    var st = {};
+    try { st = JSON.parse(get(c.pfx + lid) || '{}') || {}; } catch(e){}
+    var o = 0, d = 0;
+    Object.keys(st).forEach(function(q){ if (st[q] && st[q].done) { d++; if (st[q].ok) o++; } });
+    if (d > cap) d = cap;
+    if (o > cap) o = cap;
+    ok += o; done += d;
   });
-  var pct = total? Math.round(ok/total*100):0;
-  document.getElementById('sOk').textContent=ok;
-  document.getElementById('sDone').textContent=done;
-  document.getElementById('sTotal').textContent=total;
-  document.getElementById('sPct').textContent=pct+'%';
-  document.getElementById('gBar').style.width=pct+'%';
-  var msg='';
-  if(done===0) msg='لم تبدأ بعد — ابدأ بالدرس الأول، ويحتاج الفصل كله نحو ثلاث جلسات.';
-  else if(pct>=90) msg='ممتاز. أنت جاهز لاختبار الفصل الأول.';
-  else if(pct>=75) msg='جيد جداً. راجع الدروس التي لم تكتمل نتيجتها بعد.';
-  else if(pct>=50) msg='في الطريق الصحيح — أعد حل الأسئلة التي أخطأت فيها بعد قراءة حلولها.';
-  else msg='ابدأ بقراءة شرح الدرس أولاً ثم عد إلى التمارين.';
-  document.getElementById('gMsg').textContent=msg;
-  document.getElementById('resetEverything').addEventListener('click', function(){
-    if(!confirm('سيتم مسح كل إجاباتك في جميع الدروس. متابعة؟')) return;
-    try{ META.forEach(function(x){ localStorage.removeItem('qm1:'+x.id); localStorage.removeItem('qm1:sum:'+x.id); }); }catch(e){}
-    location.reload();
+  return { total: total, ok: ok, done: done, pct: total ? Math.round(ok / total * 100) : 0 };
+}
+
+/* ============ بناء البطاقات ============ */
+(function(){
+  var host = document.getElementById('chapters');
+  var gT = 0, gO = 0, gD = 0;
+
+  CH.forEach(function(c){
+    var el = document.createElement(c.soon ? 'div' : 'a');
+    el.className = 'ch' + (c.soon ? ' soon' : '');
+    if (!c.soon) el.href = c.url;
+
+    var html = '';
+    if (c.soon) html += '<span class="badge-soon">قيد الإعداد</span>';
+    html += '<div class="n">' + c.no + '</div><div class="t">' + c.t + '</div>' +
+            '<div class="d">' + c.d + '</div>';
+
+    if (!c.soon) {
+      var p = chapterProgress(c);
+      gT += p.total; gO += p.ok; gD += p.done;
+      html += '<div class="meta"><span class="tagpill">' +
+              countWord(c.lessons, 'دروس', 'درساً', 'درس') + '</span>' +
+              '<span class="tagpill">' +
+              countWord(p.total, 'أسئلة', 'سؤالاً', 'سؤال') + '</span></div>' +
+              '<div class="prog"><div class="bar-track"><div class="bar-fill" style="width:' +
+              p.pct + '%"></div></div><span class="pv">' + p.ok + ' / ' + p.total + '</span></div>';
+    }
+    el.innerHTML = html;
+    host.appendChild(el);
+  });
+
+  var pct = gT ? Math.round(gO / gT * 100) : 0;
+  document.getElementById('gOk').textContent    = gO;
+  document.getElementById('gDone').textContent  = gD;
+  document.getElementById('gTotal').textContent = gT;
+  document.getElementById('gPct').textContent   = pct + '%';
+  document.getElementById('gBar').style.width   = pct + '%';
+
+  var msg;
+  if (gD === 0)      msg = 'لم تبدأ بعد — افتح الفصل الأول وابدأ بدرسه الأول.';
+  else if (pct >= 90) msg = 'ممتاز. أنت جاهز للاختبار في الفصول التي أنهيتها.';
+  else if (pct >= 75) msg = 'جيد جداً. راجع الدروس التي لم تكتمل نتيجتها بعد.';
+  else if (pct >= 50) msg = 'في الطريق الصحيح — أعد حل الأسئلة التي أخطأت فيها بعد قراءة حلولها.';
+  else                msg = 'ابدأ بقراءة شرح الدرس أولاً، ثم عد إلى تمارينه.';
+  document.getElementById('gMsg').textContent = msg;
+})();
+
+/* ============ الوضع الليلي (يُطبَّق على كل الفصول) ============ */
+(function(){
+  function apply(t){
+    document.documentElement.setAttribute('data-theme', t);
+    var b = document.getElementById('themeBtn');
+    if (b) b.innerHTML = (t === 'dark' ? '☀️ <span>وضع نهاري</span>' : '🌙 <span>وضع ليلي</span>');
+  }
+  apply(document.documentElement.getAttribute('data-theme') || 'light');
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    // نكتب المفتاح لكل الفصول حتى ينتقل الاختيار معك إليها
+    try { ['qm:theme','qm1:theme','qm2:theme'].forEach(function(k){ localStorage.setItem(k, t); }); } catch(e){}
+    apply(t);
   });
 })();
 </script>
