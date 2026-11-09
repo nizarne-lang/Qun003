@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الجدول الدراسي – د. نزار الصوفي – 481</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f3ee; --card:#fffdf9; --ink:#2b3a3a; --muted:#6f7c7a; --line:#e4e0d6;
+  --head:#2f5d62;
+  --q:#e3f0ee; --q-b:#5e9c96; --q-t:#24504c;      /* 003 كمي */
+  --t:#ebe8f5; --t-b:#8a80b8; --t-t:#463d72;      /* 241 تاج */
+  --r:#eef1e2; --r-b:#94a35e; --r-t:#4b5626;      /* 111 ريض */
+  --o:#fbf0e2; --o-b:#d4a066; --o-t:#7a4f1d;      /* ساعة مكتبية */
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;font-variant-numeric:lining-nums}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 18px 40px}
+header{background:var(--head);color:#fff;border-radius:18px;padding:24px 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+header h1{margin:0 0 4px;font-size:24px;font-weight:700}
+header .sub{opacity:.85;font-size:14px}
+.term{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:10px 18px;text-align:center}
+.term b{display:block;font-size:26px;line-height:1.1}
+.term span{font-size:12px;opacity:.85}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0 22px}
+.info div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.info small{display:block;color:var(--muted);font-size:12px;margin-bottom:2px}
+.info strong{font-weight:600;font-size:15px;direction:ltr;unicode-bidi:plaintext}
+.tablebox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px;overflow-x:auto}
+table{width:100%;border-collapse:separate;border-spacing:6px;min-width:820px}
+th{background:#eef3f2;color:var(--head);font-weight:600;font-size:14px;padding:10px 6px;border-radius:10px;white-space:nowrap}
+th .to{opacity:.55;margin:0 3px}
+td.day{background:var(--head);color:#fff;font-weight:600;text-align:center;border-radius:10px;width:90px;font-size:15px}
+td{height:92px;vertical-align:middle;border-radius:10px;background:#faf8f3}
+.c{height:100%;min-height:86px;border-radius:10px;border-inline-start:4px solid;padding:8px 10px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.c .code{font-weight:700;font-size:16px}
+.c .meta{font-size:13px}
+.c .room{font-size:12px;font-weight:600;opacity:.85;margin-top:2px}
+.q{background:var(--q);border-color:var(--q-b);color:var(--q-t)}
+.t{background:var(--t);border-color:var(--t-b);color:var(--t-t)}
+.r{background:var(--r);border-color:var(--r-b);color:var(--r-t)}
+.o{background:var(--o);border-color:var(--o-b);color:var(--o-t);align-items:center;text-align:center;font-weight:600;font-size:14px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:16px 4px 0;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block;border:2px solid}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{padding:0;max-width:none}
+  table{min-width:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>الجدول الدراسي لعضو هيئة التدريس</h1>
+      <div class="sub">جامعة القصيم · كلية الأعمال والاقتصاد</div>
+    </div>
+    <div class="term"><span>الفصل الدراسي</span><b>481</b></div>
+  </header>
+
+  <section class="info">
+    <div><small>الاسم</small><strong>د. نزار عبدالله إسماعيل الصوفي</strong></div>
+    <div><small>القسم</small><strong>نظم المعلومات الإدارية</strong></div>
+    <div><small>البريد الإلكتروني</small><strong>na.alsufi@qu.edu.sa</strong></div>
+    <div><small>الهاتف</small><strong>0163017150</strong></div>
+  </section>
+
+  <div class="tablebox">
+  <table>
+    <thead>
+      <tr>
+        <th>اليوم</th>
+        <th>8:00<span class="to">–</span>9:15</th>
+        <th>9:25<span class="to">–</span>10:40</th>
+        <th>10:40<span class="to">–</span>11:45</th>
+        <th>11:45<span class="to">–</span>1:00</th>
+        <th>1:15<span class="to">–</span>2:30</th>
+        <th>5:00<span class="to">–</span>6:40</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="day">الأحد</td>
+        <td><div class="c t"><span class="code">241 تاج</span><span class="meta">شعبة 5883 · نظري</span></div></td>
+        <td></td>
+        <td><div class="c o">ساعة مكتبية</div></td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7943 · نظري</span><span class="room">قاعة 201 أ</span></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="day">الاثنين</td>
+        <td></td>
+        <td></td>
+        <td><div class="c o">ساعة مكتبية</div></td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7943 · نظري</span><span class="room">قاعة 201 أ</span></div></td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7941 · تدريب</span><span class="room">قاعة 203 ب</span></div></td>
+        <td><div class="c r"><span class="code">111 ريض</span><span class="meta">تدريب</span><span class="meta">شعب 7417 · 7446 · 7420</span></div></td>
+      </tr>
+      <tr>
+        <td class="day">الثلاثاء</td>
+        <td></td>
+        <td><div class="c t"><span class="code">241 تاج</span><span class="meta">شعبة 5883 · نظري</span></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="day">الأربعاء</td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7894 · نظري</span><span class="room">قاعة 201 ز</span></div></td>
+        <td><div class="c o">ساعة مكتبية</div></td>
+        <td></td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7933 · نظري</span><span class="room">قاعة 101 ب</span></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="day">الخميس</td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7894 · نظري</span><span class="room">قاعة 201 ز</span></div></td>
+        <td><div class="c o">ساعة مكتبية</div></td>
+        <td></td>
+        <td><div class="c q"><span class="code">003 كمي</span><span class="meta">شعبة 7933 · نظري</span><span class="room">قاعة 104 ب</span></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="legend">
+    <span><i style="background:var(--q);border-color:var(--q-b)"></i>003 كمي – مبادئ التحليل الكمي</span>
+    <span><i style="background:var(--t);border-color:var(--t-b)"></i>241 تاج</span>
+    <span><i style="background:var(--r);border-color:var(--r-b)"></i>111 ريض</span>
+    <span><i style="background:var(--o);border-color:var(--o-b)"></i>ساعة مكتبية</span>
+  </div>
+
+  <footer>جامعة القصيم · كلية الأعمال والاقتصاد · قسم نظم المعلومات الإدارية</footer>
+</div>
+</body>
+</html>
